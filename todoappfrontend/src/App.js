@@ -11,7 +11,7 @@ class App extends Component{
     }
   }
 
-  API_URL="http://localhost:5038/";
+  API_URL="https://react-mongo-nodejs-v1.vercel.app/";
 
   componentDidMount(){
     this.refreshNotes();
@@ -57,8 +57,8 @@ class App extends Component{
         <button onClick={() => this.addClick()}>Add Notes</button>
         {notes.map(note => 
             <p>
-              <b>{note.description}</b>
-              <button onClick={() => this.deleteClick(note.id)}>Delete Notes</button>
+              <b>{note.description}</b>&nbsp;
+              <button onClick={() => this.deleteClick(note.id)}>Delete</button>
             </p>
           )}
       </div>
